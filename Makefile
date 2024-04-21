@@ -1,8 +1,8 @@
 build:
-	g++ -o consumer consumer.cpp
+	g++ consumer.cpp -o consumer -sectcreate __TEXT __info_plist ./Info.plist
 	g++ -o producer producer.cpp
 run: build
-	./consumer
+	sudo ./consumer
 	./producer
 clean:
 	rm consumer producer
