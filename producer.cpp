@@ -5,11 +5,12 @@
 
 int main() 
 {
+    int a = 10000;
+    std::cout << &a << std::endl;
     while (true)
     {
-        std::cout << "Hello World!" << std::endl;
-        std::this_thread::sleep_for(std::chrono::seconds(10));
+        std::cout << "Input a new value: ";
+        std::cin >> a;
     }
-    
     return 0;
 }
